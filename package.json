@@ -15,7 +15,6 @@
 
   },
   "dependencies": {
-<<<<<<< HEAD
     "@fontsource/poppins": "^5.0.8",
     "@react-google-maps/api": "^2.19.2",
     "@types/styled-components": "^5.1.27",
@@ -32,10 +31,6 @@
     "react-tooltip": "^5.21.4",
     "styled-components": "^6.0.8",
     "yup": "^1.2.0"
-=======
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
->>>>>>> 01215feb63ee0e0e818efcefad64512280720b9e
   },
   "devDependencies": {
     "@babel/core": "^7.22.17",
