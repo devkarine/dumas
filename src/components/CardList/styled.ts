@@ -11,6 +11,7 @@ export const List = styled.div<ListProps>`
   justify-content: baseline;
   flex-wrap: wrap;
   overflow: hidden;
+  min-height: 180px;
   max-height: 400px;
   gap: 28px;
   padding: 8px;

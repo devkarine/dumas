@@ -1,8 +1,7 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useCart } from '../../contexts/cartContex';
 import { AddressDescription, AddressTitle } from '../Nav/styled';
 import { AddressInfo, SelectorContainer } from './styled';
-import { useAuth } from '../../contexts/authContext';
 import { closeOnClickOutside } from '../../utils/closeOnClickOutside';
 import { getAddresses } from '../../service/api/address';
 import { Address } from '../../types/Address';
@@ -27,7 +26,6 @@ export const AddressSelector = ({ closeSelector }: AddressSelectorProps) => {
 
   const { data } = useQuery(['addresses'], getAddresses);
   useEffect(() => {
-    console.log(data);
     if (data) {
       setAddresses(data.data);
     }

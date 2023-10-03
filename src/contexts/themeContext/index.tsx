@@ -32,7 +32,6 @@ export const ThemeProviderContext = ({ children }: ThemeProviderProps) => {
   useEffect(() => {
     const storedTheme = secureLocalStorage.getItem('theme');
     if (storedTheme) {
-      console.log(storedTheme);
       setTheme(storedTheme as ThemeVariations);
       setActiveTheme(storedTheme === 'light' ? light : dark);
     }

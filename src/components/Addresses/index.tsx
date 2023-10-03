@@ -10,7 +10,6 @@ import { AddAddressModal } from '../AddAddressModal';
 interface AddressProfileProps {
   address: Address;
 }
-//TODO resolver bug enviar nulos no put
 export const AddressProfile: React.FC<AddressProfileProps> = ({
   address
 }: AddressProfileProps) => {
@@ -18,7 +17,6 @@ export const AddressProfile: React.FC<AddressProfileProps> = ({
   const { activeAddress, setActiveAddress } = useCart();
 
   const handleSubmit = async (address: Partial<Address>) => {
-    console.log('enviar dados', address);
     const response = await api.put<Address>(
       `/clients/addresses/${address.id}`,
       {

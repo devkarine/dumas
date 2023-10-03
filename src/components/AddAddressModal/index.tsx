@@ -125,12 +125,14 @@ export const AddAddressModal = ({
     }
   };
 
+  const { content } = customStyles;
+
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={closeModal}
       contentLabel="Editar Endereços"
-      style={customStyles}
+      style={{ content: { ...content, maxHeight: '550px' } }}
     >
       <ModalContent>
         <ContainerTitleClose>
