@@ -110,10 +110,12 @@ interface SearchContainerProps {
 }
 export const SearchContainer = styled.div<SearchContainerProps>`
   border-radius: 30px;
-  border: 2px solid ${({ theme }) => theme.colors.border.main};
+  border: 2px solid
+    ${({ theme, open }) => (open ? theme.colors.border.main : 'none')};
   height: 50px;
   width: ${({ open }) => (open ? '340px' : '80px')};
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme, open }) =>
+    open ? theme.colors.white : 'none'};
   display: flex;
   align-items: center;
   justify-content: flex-end;

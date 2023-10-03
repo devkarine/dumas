@@ -34,7 +34,8 @@ export const light: DefaultTheme = {
       main: '#FF0000'
     },
     border: {
-      main: '#FF5600'
+      main: '#FF5600',
+      light: '#ccc'
     }
   },
   fonts: {
@@ -89,7 +90,8 @@ export const dark: DefaultTheme = {
       secondaryAccent: '#FFF'
     },
     border: {
-      main: '#FFF'
+      main: '#FFF',
+      light: '#eee'
     }
   },
   logoSrc: 'ImagesMainLayout/dark/logo.png',

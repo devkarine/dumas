@@ -2,10 +2,9 @@ import { useState } from 'react';
 import { Telephone } from '../../types/Telephone';
 import { api } from '../../service/api';
 import queryClient from '../../service/reactQuery/queryClient';
-import { FiEdit, FiSave, FiTrash2 } from 'react-icons/fi';
+import { FiEdit, FiPhone, FiSave, FiTrash2 } from 'react-icons/fi';
 import {
   ContainerTelephoneProfile,
-  InputPhone,
   WrapperEditDelete,
   WrapperInputsPhones
 } from './styled';
@@ -15,6 +14,7 @@ import { MessageErrorsContainer } from '../../pages/Login/styled';
 import { updateTelephone } from '../../service/api/telephone';
 import { handleRequestError } from '../../utils/handleRequestError';
 import { AxiosError } from 'axios';
+import { Input } from '../Input';
 
 interface TelephoneProfileProps {
   telephone: Telephone;
@@ -86,12 +86,20 @@ export const TelephoneProfile = ({ telephone }: TelephoneProfileProps) => {
       {isEditing ? (
         <WrapperInputsPhones>
           <WrapperEditDelete>
-            <InputPhone
+            <Input
+              Icon={FiPhone}
               type="tel"
               onKeyUp={handlePressEnter}
               value={newTelephone}
               onChange={e => setNewTelephone(e.target.value)}
+              isFormik={false}
             />
+            {/* <InputPhone
+              type="tel"
+              onKeyUp={handlePressEnter}
+              value={newTelephone}
+              onChange={e => setNewTelephone(e.target.value)}
+            /> */}
             <span onClick={() => handleSaveClick()}>
               {' '}
               <FiSave />

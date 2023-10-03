@@ -11,7 +11,7 @@ export const Container = styled.div<InputContainerProps>`
   padding: 18px 26px;
   font-size: ${({ theme }) => theme.fonts.text.small};
   font-weight: ${({ theme }) => theme.fonts.weight.light};
-  border: 1px solid ${({ theme }) => theme.colors.white};
+  border: 1px solid ${({ theme }) => theme.colors.border.light};
   display: flex;
   gap: 8px;
   width: 380px;
